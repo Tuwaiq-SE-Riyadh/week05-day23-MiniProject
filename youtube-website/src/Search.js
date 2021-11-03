@@ -18,7 +18,7 @@ function Search() {
         .catch((error) => console.log(error))
       },[searchVal])
 
-      const searchVid = (e) => {
+      const searchVid = (e) => { 
 
         let vid = e.target.value;
         setVideos(vid)

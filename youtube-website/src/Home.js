@@ -5,11 +5,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, Route, useParams, useHistory } from "react-router-dom";
 import { useState } from 'react';
 
-
-
 function Home() {
 
-    // const userContext = useContext(UserContext)
+// const userContext = useContext(UserContext)
 // const [id, setId] = useState();
 const history = useHistory();
    
