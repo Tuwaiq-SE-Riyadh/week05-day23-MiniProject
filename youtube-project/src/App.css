@@ -1,0 +1,85 @@
+.listU {
+  list-style-type: none;
+  margin: 0;
+  margin-top: 0ch;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.listl {
+  float: left;
+}
+
+.listlA {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 14px;
+  text-decoration: none;
+  font-family:'Times New Roman', Times, serif;
+
+}
+
+.listl:hover {
+  background-color: #111;
+}
+
+.mostPopular{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
+}
+
+.page{
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.cardDiv{
+  padding: 1rem;
+}
+.btn{
+  background-color: white;
+}
+
+.videoDiv{
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  justify-items: center;
+}
+
+.textNav{
+  /* align-self: center; */
+  height: 1.5rem;
+  /* justify-self: center; */
+}
+/* .resultPage{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr ;
+} */
+.searchResult{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr  ;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+}
+
+.resultPage{
+  display: grid;
+  grid-template-columns: 1fr  ; 
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+
+}
