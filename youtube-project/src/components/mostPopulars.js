@@ -17,7 +17,7 @@ function MostPopular(){
     
     useEffect(() => {
         axios
-          .get("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&chart=mostPopular&key=AIzaSyDkbuPNrn6rDX1xsHmj07xQqntviV1fSH0")
+          .get("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&chart=mostPopular&key=YOUR_API_KEY")
           .then((response) => {
             const action = setPopular(response.data.items);
             dispatch(action);

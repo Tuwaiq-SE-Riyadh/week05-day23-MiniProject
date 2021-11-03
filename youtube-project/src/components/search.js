@@ -1,10 +1,4 @@
 import { useSelector } from "react-redux"
-import axios from "axios";
-import { useDispatch } from "react-redux";
-import { setVideo } from "../reducers/video/action";
-import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { setSearch } from "../reducers/search/actions";
 import SearchComponents from "./searchComponents";
 
 function SearchPage(comp){

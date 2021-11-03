@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux"
 import { Link } from "react-router-dom"
 import { setSearch } from "../reducers/search/actions"
 import axios from "axios"
-import { useEffect } from "react"
 
 
 function NavBar(){
@@ -15,7 +14,7 @@ function NavBar(){
     }
     const GetSearchValue = ()=>{
         axios
-          .get(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${searchText}&key=AIzaSyDkbuPNrn6rDX1xsHmj07xQqntviV1fSH0`)
+          .get(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${searchText}&key=YOUR_API_KEY`)
           .then((response) => {
             const action = setSearch((response.data.items)) 
             dispatch(action)

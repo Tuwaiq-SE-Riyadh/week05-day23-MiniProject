@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom"
-import WatchVideo from "./watching"
-import { Route } from "react-router"
+
 import { setVideo } from "../reducers/video/action"
 import { useDispatch } from "react-redux"
 
