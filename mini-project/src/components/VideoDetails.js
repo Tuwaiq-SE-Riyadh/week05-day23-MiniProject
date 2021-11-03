@@ -37,7 +37,8 @@ const VideoDetails = () => {
   return (
     <div className="details">
       {vid ? (<>
-        <h3>{vid.snippet.title} ||| {vid.id}</h3>
+        <h3>{vid.snippet.title}</h3>
+        <iframe width="350" height="245" src={'https://www.youtube.com/embed/'+vid.id} ></iframe>
         <h4 className="borderdesc">Description : </h4>
         <p>{vid.snippet.description}</p>
         <div className="channel-publishdate">

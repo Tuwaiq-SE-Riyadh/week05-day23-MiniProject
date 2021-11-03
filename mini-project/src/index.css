@@ -95,12 +95,22 @@ code {
   margin: 10%;
   justify-self: center;
   display: grid;
-  grid-template-rows: 50px auto auto 90px auto;
+  grid-template-rows: 50px auto auto auto 90px auto;
   box-shadow: 0px 10px 8px 0 rgba(0,0,0,0.2);
   background: #eeeeee;
   border-radius: 8px;
   padding: 30px;
 
+}
+
+.details h3{
+  text-align: center;
+}
+
+.details iframe {
+  margin-top: 2%;
+  justify-self: center;
+  width: 400px;
 }
 
 .watch{
