@@ -1,0 +1,218 @@
+/* <link rel="preconnect" href="https://fonts.googleapis.com"> */
+
+body {
+  font-family: sans-serif;
+}
+
+.light-theme {
+  background-color: #fafafa;
+}
+
+.dark-theme {
+  background-color: #243447;
+  color: white;
+}
+.App {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+}
+.main-container {
+
+  display: grid;
+  grid-template-columns: auto;
+  /* align-self: center; */
+  justify-self: center;
+  width: 100%;
+  margin-left: 30px;
+}
+.nav-container {
+}
+.nav-container img {
+  width: 130px;
+  margin-left: 10px;
+}
+.icons{
+  width: 20px !important;
+}
+
+.topbar {
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(224, 218, 218);
+}
+.topbar input {
+  padding: 6px;
+  margin-top: 8px;
+  border: none;
+  font-size: 17px;
+  background-color: #dfd9d9;
+  width: 250px;
+}
+.topbar button {
+  padding: 6px;
+  margin-top: 8px;
+  margin-left: 5px;
+  border: 1px solid #eeeaea;
+  border-radius: 5px;
+  font-size: 17px;
+  background-color: #eeeaea;
+  /* width: 250px; */
+}
+.topbar button:hover {
+  border: 1px solid #7a7a7a;
+
+  background-color: #dfd9d9;
+  /* width: 250px; */
+}
+.topbar-btns {
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(224, 218, 218);
+}
+.topbar-btns button {
+  border: 1px solid #a09c9c;
+  padding: 3px;
+  margin-top: 8px;
+  margin-left: 5px;
+  border-radius: 20px;
+  font-size: 14px;
+  width: 75px;
+  background-color: #eeeaea;
+  /* width: 250px; */
+}
+.topbar-btns button:hover {
+  border: 1px solid #7a7a7a;
+
+  background-color: #dfd9d9;
+  /* width: 250px; */
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  /* background-color: white; */
+}
+
+ul .dark-theme{
+  background-color: red !important;
+  color: white;
+}
+
+li a {
+  display: block;
+  /* color: #000; */
+  padding: 8px ;
+  padding-left: 25px;
+  text-decoration: none;
+  
+}
+
+
+li a.active {
+  background-color: #ff0000;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #f1f1f1;
+  color: black;
+}
+.nav {
+  border-bottom: 1px solid rgb(224, 218, 218);
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.list {
+  display: flex;
+  margin-top: 50px;
+  column-gap: 50px;
+}
+button {
+  width: 100px;
+}
+img {
+  width: 500px;
+}
+
+/* Card */
+.card-container {
+  /* background-color: #fafafa; */
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 30px;
+}
+.card {
+  /* background-color: white; */
+  height: 24rem;
+  border: 1px solid rgb(223, 220, 220);
+  border-radius: 3px;
+  margin: 5px;
+  padding: 5px;
+}
+.card .dark-theme{
+  background-color: tomato !important;
+}
+.title {
+  text-align: center;
+}
+.card img {
+  width: 250px;
+  height: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card-btns {
+}
+.card button {
+  padding: 6px;
+  margin-top: 8px;
+  margin-left: 5px;
+  border: 1px solid #eeeaea;
+  border-radius: 5px;
+  font-size: 17px;
+  background-color: #eeeaea;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.card button:hover {
+  color: white;
+  padding: 6px;
+  margin-top: 8px;
+  margin-left: 5px;
+  border: 1px solid #ff0000;
+  border-radius: 5px;
+  font-size: 17px;
+  background-color: #ff0000;
+}
+.cc{
+  text-align: center;
+  color: #868686;
+}
