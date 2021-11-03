@@ -1,10 +1,6 @@
-import { Link, Route, useParams, useHistory } from "react-router-dom";
-// import { useContext } from "react";
-// import { UserContext } from "./App";
+import { Link } from "react-router-dom";
 
 function Navbar(){
-
-    // const userContext = useContext(UserContext)
 
     return (
         <div className="links">

@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { searchVideos } from './videos';
 import { useDispatch, useSelector } from "react-redux";
 import axios from 'axios';
@@ -11,9 +11,8 @@ function Search() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-
         axios
-        .get(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${videos}&key=AIzaSyACj28jAni3rr2G2iXY_hotZ94NH6NNoY0`)
+        .get(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${videos}&key=AIzaSyCUhgl52pUXIO5P9rQbKPGvlg2o2wdjKk4`)
         .then((response) => dispatch(searchVideos(response.data.items)))
         .catch((error) => console.log(error))
       },[searchVal])

@@ -12,8 +12,8 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
     <BrowserRouter>
-      {/* <Route path="/"  component={App}/> */}
-      <App/>
+      <Route path="/"  component={App}/>
+      {/* <App/> */}
       
     </BrowserRouter>
     </Provider>

@@ -1,33 +1,66 @@
-import {  useParams } from "react-router-dom";
-import React, { createContext, useEffect, useState } from 'react';
+import {  useParams, useHistory } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import {watchLater} from "./videos";
+import { useDispatch } from "react-redux";
 
 function Details() {
 
-    const [video, setVideo] = useState();
+    const [videos, setVideos] = useState([]);
     const {id} = useParams();
+    const history = useHistory();
+
+    const dispatch = useDispatch();
 
     useEffect(() => {
         axios
-        .get(`https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${id}&key=AIzaSyACj28jAni3rr2G2iXY_hotZ94NH6NNoY0`)
-        .then((response) => setVideo(response.data.items[0]))
+        .get(`https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${id}&key=AIzaSyCUhgl52pUXIO5P9rQbKPGvlg2o2wdjKk4`)
+        .then((response) => setVideos(response.data.items[0]))
         .catch((error) => console.log(error))
-    })
+    },[])
+    console.log(videos)
 
+    const watchL = (videos)=> {
+       
+        console.log(videos)
+        dispatch(watchLater(videos))
+
+
+    }
+
+    const link = "https://www.youtube.com/embed/"
     return (
+
     <div>
-       <p>{video.snippet.title}</p>
-       <p>{video.snippet.publishedAt}</p>
-       <p>{video.snippet.channelId}</p>
-       <p>{video.snippet.description}</p>
+        
+      {videos ? (
+        <div>
+         
+          <iframe width="420" height="345" src={link+videos.id}></iframe>
+     
+          <p>{videos.snippet.title}</p>
+          <p>{videos.snippet.publishedAt}</p>
+          <p>{videos.snippet.channelId}</p>
+          <p>{videos.snippet.description}</p>
 
-       <button onClick={() => {history.goBack();}}>Go back</button>
+          <button
+            onClick={() => {
+              history.goBack();
+            }}
+          >
+            Back
+          </button>
+        </div>
+      ) : (
+        ""
+      )}
 
-       <button type="button">Watch later</button>
-      
+      <button type="button" onClick={()=>{
+          history.push("/watchLater")
+          watchL(videos)
+    }}>Watch later</button>
     </div>
-
-    )
+  );
 }
 
 export default Details;

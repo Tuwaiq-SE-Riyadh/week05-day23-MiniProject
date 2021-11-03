@@ -1,14 +1,8 @@
-// import { useContext } from "react";
-// import { UserContext } from "./App";
-
-import { useDispatch, useSelector } from "react-redux";
-import { Link, Route, useParams, useHistory } from "react-router-dom";
-import { useState } from 'react';
+import { useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
 
 function Home() {
 
-// const userContext = useContext(UserContext)
-// const [id, setId] = useState();
 const history = useHistory();
    
   const state = useSelector((state) => {
@@ -23,6 +17,7 @@ const history = useHistory();
   }
 
 console.log(state.videos) 
+
     return (
         <div>
 
@@ -32,16 +27,13 @@ console.log(state.videos)
           <>
           <iframe width="420" height="345" src={link+element.id.videoId}></iframe>
           <button type="button" onClick={()=>showDetails(element.id.videoId)}>Details</button>
-          {/* <Details value={element.title}/> */}
-
-          
+     
           </>
         )
       })}
 
         </div>
       );
-    
 }
 
 export default Home;

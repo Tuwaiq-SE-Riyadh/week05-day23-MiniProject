@@ -3,13 +3,14 @@ import Navbar from './Navbar';
 import Home from './Home';
 import Search from './Search';
 import Details from './Details';
-// import Details from './Details'
+import WatchLater from './WatchLater';
 import {addVideos} from './videos';
 import axios from 'axios';
 import React, { createContext, useEffect, useState } from 'react';
-import { Link, Route, useParams, useHistory } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-// import Details from './Details';
+import { Route } from "react-router-dom";
+import { useDispatch } from "react-redux";
+// import Button from 'react-bootstrap/Button';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const UserContext = createContext();
 
@@ -22,7 +23,7 @@ function App() {
   useEffect(() => {
 
     axios
-    .get("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&chart=mostPopular&key=AIzaSyACj28jAni3rr2G2iXY_hotZ94NH6NNoY0")
+    .get("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&chart=mostPopular&key=AIzaSyCUhgl52pUXIO5P9rQbKPGvlg2o2wdjKk4")
     .then((response) => dispatch(addVideos(response.data.items)))
     .catch((error) => console.log(error))
   },[])
@@ -34,7 +35,7 @@ function App() {
       <Route exact path="/" component={Home} />
       <Route  exact path="/search" component={Search} />
       <Route exact path="/details/:id" component ={Details} />
-      {/* <Details/> */}
+      <Route exact path="/watchLater" component ={WatchLater} />
       
     </div>
   );
