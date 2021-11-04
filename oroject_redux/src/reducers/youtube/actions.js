@@ -12,16 +12,16 @@ export const addvidieo = ( video) => {
        payload: video,
      };
    };
-   export const watchlater = (videoid) => {
+   export const watchlater = (video) => {
     
     return {
       type: "WATCH_VIDEO",
-      payload: videoid,
+      payload: video,
     };
   };
 
   export const deletewatchlater = (videoid) => {
-    // todoId: is a string representing the todo id
+    
     return {
       type: "DELETE_WATCHLATER",
       payload: videoid,

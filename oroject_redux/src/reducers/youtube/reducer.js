@@ -1,5 +1,6 @@
 const initialState = {
     video: [],//value=state.video  state = initialState  video :
+    watchlater:[]
   };
   const youtubeReducer = (state = initialState, { type, payload }) => {
     switch (type) {
@@ -16,27 +17,22 @@ const initialState = {
           
         }
           
-        case "DELETE_VIDEO":
         
-          return {
-            video: state.video.filter((element) => {
-              return element.id !== payload;
-              
-            }),
-          };
-          case "WATCH_LATER":
+          case "WATCH_VIDEO":
         const wachlater=state.watchlater.slice()
         wachlater.push(payload)
           return {
-            video: state.video,
-            watchlater:wachlater
+            // video:[...state.video,{payload}]}
+             video: state.video,
+             watchlater:wachlater
                
-            }
+          }
             case "DELETE_WATCHLATER":
-      // the payload is the id
+      //  the payload is the id
       return {
-        video: state.video.filter((element) => {
-          return element.id !== payload.channelId ;
+        video:payload,
+        watchlater: state.watchlater.filter((element) => {
+          return element.channelId!== payload.channelId ;
         }),
       };
     

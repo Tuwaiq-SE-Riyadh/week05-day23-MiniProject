@@ -23,7 +23,8 @@ const VideoDetails = () => {
       });
   }, []);
   const wlater=(video)=>{
-    dispatch( watchlater (video))
+    dispatch(watchlater(video))
+    history.push("/Watchvideo")
   }
   
  const li="https://www.youtube.com/embed/"
@@ -40,8 +41,7 @@ const VideoDetails = () => {
           <p>{video.snippet.channelId}</p>
           <p>{video.description}</p>
 
-          <button className="btn btn-secondary me-3" onClick={()=> {history.push("/Watchvideo")
-        wlater(video)}}> wacthlater</button>
+          <button className="btn btn-secondary me-3" onClick={()=> {wlater(video)}}> wacthlater</button>
           <button className="btn btn-info" onClick={() => {history.goBack();  }} >
            Go Back
             </button> 
