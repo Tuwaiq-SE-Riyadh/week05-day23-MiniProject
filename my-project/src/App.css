@@ -1,0 +1,45 @@
+.flex {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+.links {
+  display: flex;
+  gap: 3rem;
+
+  color: rgb(245, 245, 245);
+}
+a:hover {
+  background-color: rgba(238, 2, 2, 0.534);
+  color: rgb(255, 255, 255);
+}
+a {
+  color: rgb(255, 255, 255);
+}
+* {
+  text-align: center;
+}
+body {
+  background-color: rgba(0, 0, 0, 0.911);
+}
+
+button {
+  background: rgb(252, 252, 252);
+  width: auto;
+  height: auto;
+  border-radius: 25px 25px 25px 25px;
+  color: rgba(148, 11, 11, 0.884);
+  font-size: 18px;
+  border-color: rgb(240, 239, 237);
+}
+input {
+  background: rgba(196, 13, 0, 0.795);
+  width: 150px;
+  height: 30px;
+  border: 25px;
+  color: rgb(209, 180, 125);
+}
+p {
+  color: azure;
+}
