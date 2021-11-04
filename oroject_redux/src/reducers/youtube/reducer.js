@@ -19,16 +19,16 @@ const initialState = {
           
         
           case "WATCH_VIDEO":
-        const wachlater=state.watchlater.slice()
-        wachlater.push(payload)
+         const wachlater=state.watchlater.slice()
+         wachlater.push(payload)
           return {
-            // video:[...state.video,{payload}]}
-             video: state.video,
+            //  video:[...state.video,{payload}]}
+              video: state.video,
              watchlater:wachlater
-               
           }
+          
             case "DELETE_WATCHLATER":
-      //  the payload is the id
+    
       return {
         video:payload,
         watchlater: state.watchlater.filter((element) => {

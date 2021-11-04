@@ -16,7 +16,8 @@ const Navbar =({lang,toggleLang})=>{
          <Link to="/" className="nav-link">{lang ==='En'?"Hom":"يوتيوب"}</Link>
       </li>
       <li className="nav-item">
-        <Link to="/Search" className="nav-link">{lang ==='En'?"Search":"بحث"}</Link>
+        <Link to="/Search" className="nav-link">search</Link>
+
       </li>
     </ul>
     <ul className="navbar-nav">
@@ -27,10 +28,10 @@ const Navbar =({lang,toggleLang})=>{
         <button onClick={()=>toggleLang('En')} className="btn btn-secondary mx-2">En</button>
       </li>
     </ul>
-    <form className="d-flex">
+    {/* <form className="d-flex">
       <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
       <button className="btn btn-outline-success" type="submit">Search</button>
-    </form>
+    </form> */}
   </div>
 </div>
 </nav>

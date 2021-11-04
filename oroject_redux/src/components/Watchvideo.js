@@ -11,28 +11,15 @@ const Watchvideo = ({ video }) => {
     const state = useSelector((state) => {
         console.log(state);
         return {
-            video:state.youtubeReducer.video,
+            // video:state.youtubeReducer.video,
             watch: state.youtubeReducer.video,
 
 
         };
     });
-    // useEffect(() => {
-    //     axios
-    //         .get("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&chart=mostPopular&key=AIzaSyAFB15Gwwb26DjI0ElBavPXnNHaBXT9xUk")
-    //         .then((response) => {
-    //             console.log(response)
-    //             const action = watchlater(response.data.items);
-    //             console.log(action)
-    //             dispatch(action);
-    //         })
-    //         .catch((err) => {
-    //             console.log(err);
-    //         });
-    // }, []);
+    
 
-    const li = "https://www.youtube.com/embed/"
-
+    
     return(
         <div>
        {console.log(state.watch)}
@@ -45,9 +32,9 @@ const Watchvideo = ({ video }) => {
                         <iframe width="420" height="315"
                             src={li + element.id.videoId}>
                         </iframe>
-                        <p>{element.snippet.title}</p>
-                        <p>{element.snippet.publishedAt}</p>
-                        <p>{element.snippet.channelId}</p>
+                        <p>{element.title}</p>
+                        <p>{element.publishedAt}</p>
+                        <p>{element.channelId}</p>
                         <p>{element.description}</p>
     
                         <button className="btn btn-secondary me-2" onClick={() => {
@@ -65,9 +52,6 @@ const Watchvideo = ({ video }) => {
     )
 
     
-
-
-
 
 
 

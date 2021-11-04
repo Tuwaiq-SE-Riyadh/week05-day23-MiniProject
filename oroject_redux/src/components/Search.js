@@ -25,6 +25,7 @@ const Search = () => {
             });
     }, [searchText]);
     const changesearchvid = (e) => {
+        e.preventDefault()
         setSearchText(e.target.value)
     }
     const searching = () => {

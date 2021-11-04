@@ -9,11 +9,11 @@ const VideoDetails = () => {
   const { id } = useParams();
   const history = useHistory();
   const dispatch = useDispatch();
-  const url=`https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${id}&key=AIzaSyAFB15Gwwb26DjI0ElBavPXnNHaBXT9xUk`
+  const ul=`https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${id}&key=AIzaSyAFB15Gwwb26DjI0ElBavPXnNHaBXT9xUk`
   useEffect(() => {
     axios
-    
-      .get(url)
+   
+      .get(ul)
       .then((response) => {
         setVideo(response.data.items[0]);
         console.log(response.data)
