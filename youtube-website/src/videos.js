@@ -64,4 +64,4 @@ export const deleteWatchLater = (videos) => {
         type: "DELETE_WATCH_LATER",
         payload: videos,
     };
-};
+}

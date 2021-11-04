@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
-import {deleteWatchLater} from './videos';
-import {useDispatch} from "react-redux";
+import { deleteWatchLater } from './videos';
+import { useDispatch } from "react-redux";
 
 function WatchLater() {
 
@@ -12,7 +12,7 @@ function WatchLater() {
         watchLater: state.videos.watchLater
       };
     });
-
+console.log(state.watchLater)
      return (
         <div>
 

@@ -4,44 +4,34 @@ import axios from 'axios';
 import {watchLater} from "./videos";
 import { useDispatch } from "react-redux";
 
-function Details() {
 
-    const [videos, setVideos] = useState([]);
+function Details() {
+    const dispatch = useDispatch();
+
+    const [video, setVideo] = useState();
     const {id} = useParams();
     const history = useHistory();
 
-    const dispatch = useDispatch();
-
     useEffect(() => {
         axios
-        .get(`https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${id}&key=AIzaSyCUhgl52pUXIO5P9rQbKPGvlg2o2wdjKk4`)
-        .then((response) => setVideos(response.data.items[0]))
+        .get(`https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${id}&key=AIzaSyA533O9cIgLG1BZMQVxvx0WlUUD7hxB1yI`)
+        .then((response) => setVideo(response.data.items[0]))
         .catch((error) => console.log(error))
     },[])
-    console.log(videos)
-
-    const watchL = (videos)=> {
-       
-        console.log(videos)
-        dispatch(watchLater(videos))
-
-
-    }
-
+    console.log(video)
     const link = "https://www.youtube.com/embed/"
     return (
 
     <div>
         
-      {videos ? (
-        <div>
-         
-          <iframe width="420" height="345" src={link+videos.id}></iframe>
+      {video ? (
+        <div>      
+          <iframe width="420" height="345" src={link + id}></iframe>
      
-          <p>{videos.snippet.title}</p>
-          <p>{videos.snippet.publishedAt}</p>
-          <p>{videos.snippet.channelId}</p>
-          <p>{videos.snippet.description}</p>
+          <p>{video.snippet.title}</p>
+          <p>{video.snippet.publishedAt}</p>
+          <p>{video.snippet.channelId}</p>
+          <p>{video.snippet.description}</p>
 
           <button
             onClick={() => {
@@ -55,10 +45,13 @@ function Details() {
         ""
       )}
 
-      <button type="button" onClick={()=>{
+      <button type="button" onClick={() => {
+
+          
+          dispatch(watchLater(video))
           history.push("/watchLater")
-          watchL(videos)
-    }}>Watch later</button>
+          }}>Watch later</button>
+
     </div>
   );
 }

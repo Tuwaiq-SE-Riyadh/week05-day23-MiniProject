@@ -23,7 +23,7 @@ function App() {
   useEffect(() => {
 
     axios
-    .get("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&chart=mostPopular&key=AIzaSyCUhgl52pUXIO5P9rQbKPGvlg2o2wdjKk4")
+    .get("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&chart=mostPopular&key=AIzaSyA533O9cIgLG1BZMQVxvx0WlUUD7hxB1yI")
     .then((response) => dispatch(addVideos(response.data.items)))
     .catch((error) => console.log(error))
   },[])
