@@ -1,0 +1,55 @@
+.fa {
+    font-size:50px;
+    color:red;
+}
+
+
+.input1{
+    width: 400px;
+    height: 40px;
+    font-size: 30px;
+    margin-top: 50px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns:35% 35% 35%;
+    grid-gap: 10px;
+    padding: 100px;
+    }
+    .grid> div {
+      border: 10px solid white;
+      /* padding: 50px; */
+      font-size: 30px;
+      text-align: center;
+      /* background-color: rgb(219, 215, 175); */
+    }
+    .btn{
+        background-color: white; 
+        color: black; 
+        border: 2px solid #008CBA;
+        width: 20%;
+        height: 10%;
+        font-size:25px ;
+      }
+
+      .btn:hover {
+        background-color: #008CBA;
+        color: white;
+      }
+      
+      .searchBtn{
+        background-color: white; 
+        color: black; 
+        border: 2px solid #008CBA;
+        width: 10%;
+        height: 20%;
+        font-size:25px ;
+      }
+
+      .searchBtn:hover {
+        background-color: #008CBA;
+        color: white;
+      }
+      
+  
