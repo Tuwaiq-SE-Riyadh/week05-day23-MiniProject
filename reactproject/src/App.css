@@ -1,0 +1,40 @@
+.App {
+  text-align: center;
+  background-color: rgb(5, 1, 29);
+}
+.mostPopular{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template: 1fr 1fr;
+  justify-content: center;
+}
+p{
+  color: aliceblue;
+}
+.divSearch{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Search{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+  align-items: center;
+}
+.videoList{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.HeaderDesign{
+  color: aliceblue;
+}
