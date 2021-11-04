@@ -1,0 +1,7 @@
+.App {
+  text-align: center;
+}
+.links {
+  display: flex;
+  gap: 3rem;
+}
