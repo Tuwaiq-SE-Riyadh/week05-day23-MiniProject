@@ -1,4 +1,3 @@
-import { WatchLater } from "./actions";
 
 const initialState = {
     videos: [],
@@ -16,7 +15,20 @@ const initialState = {
         case "WATCH_LATER":
             // the payload is an object
             const videoList = state.watchLater.slice()
+            console.log(videoList.length);
+            let x=false;
+          for (let i=0;i<videoList.length;i++){
+              if(videoList[i].channelId === payload.channelId){
+                  x=true
+                  alert("The video already exists")
+                  break;
+              }  
+        }
+        if(x === false){
             videoList.push(payload)
+        }
+        
+           
             return {
                 videos: state.videos,
                 watchLater: videoList,

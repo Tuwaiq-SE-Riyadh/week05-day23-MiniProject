@@ -15,7 +15,7 @@ function Videos(){
     });
     useEffect(() => {
         axios
-          .get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&chart=mostPopular&key=AIzaSyCu1VqGje_XhZt1fMDNaiJltUSMcpFajIc')
+          .get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&chart=mostPopular&key=AIzaSyBfh1M8w3UXnjlU_tOZ4IyKHsopwKR3LZA')
           .then((response) => {       
             console.log(response.data.items);
             // console.log(response.data.items[0].snippet.title);
@@ -28,11 +28,11 @@ function Videos(){
       }, []); 
 
     return(
-        <div>
+        <div className="min1">
         {state.videos.map((element,index) => {
         return (
-            <div key={index} >
-              <ListVideos Videos={element} />  
+            <div className="min1-div" >
+              <ListVideos Videos={element} key={index}  />  
            {/* <ListVideos videoId={element.id.videoId} title={element.snippet.title} describe={element.snippet.describe} key={element.id} /> */}
 
                 {/* <p>{element.id.videoId} </p>

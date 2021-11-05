@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, useHistory } from "react-router";
 import { useDispatch} from "react-redux";
 import  {WatchLater} from '../reducers/user/actions'
-
+import { Button  } from 'react-bootstrap';
 import axios from "axios";
 
 function PageDetalis(){
@@ -14,8 +14,8 @@ function PageDetalis(){
     useEffect(() => {
        
         axios
-        // https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${id}&key=AIzaSyBs8YDqDg5CX_C7sisUFYR6xJ5O_vpsBZg
-          .get(`  https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${id}&key=AIzaSyCu1VqGje_XhZt1fMDNaiJltUSMcpFajIc`)
+      
+          .get(`  https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${id}&key=AIzaSyBfh1M8w3UXnjlU_tOZ4IyKHsopwKR3LZA`)
           .then((response) => {
             
               setvideos(response.data.items[0].snippet);
@@ -34,7 +34,7 @@ const add=()=>{
     // console.log(arr);
     const action = WatchLater(videos);
   dispatch(action);
-  history.push(`/WatchLater`)
+  
 
 }
 
@@ -44,20 +44,21 @@ const add=()=>{
  
           {videos ? (
         <div>
-          <p>{id}</p>
+        
           <iframe width="420" height="315"
             src='https://www.youtube.com/embed/${id}'>
             </iframe>
+           <div className="divTitle"> 
           <p>{videos.title}</p>
+          <Button  className="boutton-add"   variant="outline-danger" onClick={add}>Add to Watch</Button>
+          {/* <button onClick={add}>add </button> */}
+          </div> 
           <p>{videos.description + ""}</p>
-          <button onClick={add}>add </button>
-          <button
-            onClick={() => {
-              history.goBack();
-            }}
-          >
+          <Button    variant="outline-danger" onClick={() => {history.goBack(); }}>GoBack</Button>
+          {/* <button
+            onClick={() => {history.goBack(); }} >
             Back
-          </button>
+          </button> */}
         </div>
       ) : (
         ""

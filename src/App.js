@@ -5,6 +5,8 @@ import Videos from './components/Videos ';
 import { Route } from "react-router-dom";
 import PageDetalis from './components/PageDetalis'
 import WatchLater from './components/WatchLater'
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <div className="App">
