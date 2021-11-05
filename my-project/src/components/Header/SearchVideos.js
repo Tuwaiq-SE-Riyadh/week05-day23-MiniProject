@@ -1,10 +1,7 @@
 import { useEffect, useState } from "react";
-
 import { useDispatch } from "react-redux";
-
 import axios from "axios";
-
-import { setYoutube } from "../reducers/youtube/actions";
+import { setYoutube } from "../../reducers/youtube/actions";
 
 function SearchVideos() {
   const [search, setSearch] = useState();
@@ -13,7 +10,7 @@ function SearchVideos() {
   useEffect(() => {
     axios
       .get(
-        `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${value}&key=AIzaSyB2TErBVnjJmaCZa5CjGH-PpkN3HptbV0k`
+        `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${value}&key=AIzaSyCaDm7IOsc6AZn8UV_-EBeiyuUyfjMg7AU`
       )
       .then((response) => {
         console.log(response);

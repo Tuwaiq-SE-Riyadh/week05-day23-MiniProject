@@ -11,7 +11,7 @@ const WatchLater = () => {
   useEffect(() => {
     axios
       .get(
-        `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${id}&key=AIzaSyB2TErBVnjJmaCZa5CjGH-PpkN3HptbV0k`
+        `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${id}&key=AIzaSyCaDm7IOsc6AZn8UV_-EBeiyuUyfjMg7AU`
       )
       .then((response) => {
         console.log(response);
