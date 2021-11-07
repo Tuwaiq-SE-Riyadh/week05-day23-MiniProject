@@ -34,10 +34,12 @@ function VideoDetails() {
       }, []);
       const watchLaterClick = ()=>{
         // state.video[0]
+        console.log("warchlater clicked");
+        console.log(state.video[0]);
         const action = setList(state.video[0]);
         dispatch(action);
         console.log("state.video");
-        console.log(action);
+        console.log(state.video[0]);
         history.push("/watchlater")
       }
     return (

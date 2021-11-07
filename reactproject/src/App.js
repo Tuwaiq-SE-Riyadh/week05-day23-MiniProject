@@ -1,8 +1,6 @@
 import './App.css';
 import Home from './components/Home';
-import Search from './components/Search';
 import { Route } from "react-router-dom";
-import Video from './components/Video';
 import VideoDetails from './components/VideoDetails';
 import WatchLater from './components/WatchLater';
 
