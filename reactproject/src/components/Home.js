@@ -55,9 +55,12 @@ function Home() {
             </button>
             </div>
             </div>
+            <div className="mostPopular">
+
           {state.video.map((e)=>{
-            return <Video className="mostPopular" id={e.id.videoId} key={e.id.videoId}/>
+            return <Video id={e.id.videoId} key={e.id.videoId}/>
           })}
+            </div>
       </div>
     );
 }

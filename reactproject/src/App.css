@@ -7,6 +7,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template: 1fr 1fr;
   justify-content: center;
+  margin: 20px;
 }
 p{
   color: aliceblue;
@@ -33,6 +34,7 @@ p{
   justify-content: center;
   align-items: center;
   gap: 20px;
+  margin-bottom: 50px;
 }
 
 .HeaderDesign{
@@ -41,9 +43,11 @@ p{
 
 .watchLater{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  row-gap: 20px;
   justify-content: center;
   align-items: center;
+  padding: 50px;
 }
 .videoList{
   display: flex;
@@ -51,4 +55,18 @@ p{
   justify-content: center;
   align-items: center;
   gap: 70px;
+}
+
+.description{
+  margin-left: 80px;
+  margin-right: 80px;
+  padding-bottom:70px;
+}
+.videoDetails{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  row-gap: 10px;
 }

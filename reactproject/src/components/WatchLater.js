@@ -20,12 +20,8 @@ function WatchLater() {
     }
     // console.log("id test"+state.watchLater.id.videoId);
     return (
-      <div className="videoList">
+      <div className="watch">
           <h1 className="HeaderDesign">Watch Later</h1>
-          {/* <iframe width="420" height="315"
-                src={srcVid}>
-            </iframe> */}
-          {/* <Video className="mostPopular" id={state.watchLater.id.videoId} key={state.watchLater.id.videoId}/> */}
         {state.watchLater.map((e)=>{
             let srcVid =`https://www.youtube.com/embed/${e.id}`
             return <div className="watchLater">

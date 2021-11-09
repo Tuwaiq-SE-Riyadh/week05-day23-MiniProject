@@ -43,20 +43,19 @@ function VideoDetails() {
         history.push("/watchlater")
       }
     return (
-      <div className="videoList">
+      <div className="videoDetails">
         {/* display video details */}
         <iframe width="420" height="315"
                 src={srcVid}>
         </iframe>
         <button onClick={watchLaterClick}>Watch later</button>
-        <h1 className="HeaderDesign">Title</h1>
-        <p>{state.video[0].snippet.title}</p>
-        <h1 className="HeaderDesign">published At</h1>
-        <p>{state.video[0].snippet.publishedAt}</p>
-        <h1 className="HeaderDesign">channel Title</h1>
-        <p>{state.video[0].snippet.channelTitle}</p>
-        <h1 className="HeaderDesign">description</h1>
-        <p>{state.video[0].snippet.description}</p>
+        <h1 className="HeaderDesign">{state.video[0].snippet.title}</h1>
+        {/* <p></p> */}
+        {/* <h1 className="HeaderDesign"></h1> */}
+        <p>published At {state.video[0].snippet.publishedAt}</p>
+        <h1 className="HeaderDesign">Channel: {state.video[0].snippet.channelTitle}</h1>
+        <h1 className="HeaderDesign">Description:</h1>
+        <p className="description">{state.video[0].snippet.description}</p>
       </div>
     );
 }
